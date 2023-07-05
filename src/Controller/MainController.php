@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Shorter\UrlShortenerCLI;
 
 class MainController extends AbstractController
 {
@@ -19,7 +20,7 @@ class MainController extends AbstractController
     #[Route('/numb', name: 'app_numb')]
     public function number()
     {
-        $numb = random_int(0, 1000);
+        $numb = random_int(0, 10000);
         return new Response($numb);
 
 
